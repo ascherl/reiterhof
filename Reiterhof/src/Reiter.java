@@ -5,13 +5,24 @@ public class Reiter {
 	
 	private String name;
 	private ArrayList<Pferd> wuensche;
-	private Pferd pferd;
+	private int koennen;
 	
-	Reiter(String name, int Wuensche, int koennen) {
-		this.name = name;
+	Reiter(String name, ArrayList<Pferd> Wuensche, int koennen) {
+		this.setName(name);
 		this.wuensche = wuensche;
-		this.pferd = null;
-		
+		this.setKoennen(koennen);
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public int getKoennen() {
+		return koennen;
+	}
+	
+	public ArrayList<Pferd> getWuensche() {
+		return wuensche;
 	}
 	
 }
