@@ -1,18 +1,19 @@
-import java.util.*;
 public class Paar {
 
+	private Pferd Pferd;
+	private Reiter Reiter;
 	
-	private Pferd  Pferd;
-	private  Reiter Reiter;
-	
-	private ArrayList<Paar> Paar;
-
-	public ArrayList<Paar> getPaar() {
-		return Paar;
+	public Paar(Reiter Reiter, Pferd Pferd){
+		this.Pferd = Pferd;
+		this.Reiter = Reiter;
 	}
-
-	public void setPaar(ArrayList<Paar> paar) {
-		Paar = paar;
+	
+	public Reiter getReiter() {
+		return this.Reiter;
+	}
+	
+	public Pferd getPferd() {
+		return this.Pferd;
 	}
 	
 }

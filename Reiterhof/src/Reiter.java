@@ -8,9 +8,9 @@ public class Reiter {
 	private int koennen;
 	
 	Reiter(String name, ArrayList<Pferd> Wuensche, int koennen) {
-		this.setName(name);
-		this.wuensche = wuensche;
-		this.setKoennen(koennen);
+		this.name = name;
+		this.wuensche = Wuensche;
+		this.koennen = koennen;
 	}
 
 	public String getName() {
@@ -22,7 +22,7 @@ public class Reiter {
 	}
 	
 	public ArrayList<Pferd> getWuensche() {
-		return wuensche;
+		return this.wuensche;
 	}
 	
 }
