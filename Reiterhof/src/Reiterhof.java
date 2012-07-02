@@ -22,7 +22,6 @@ public class Reiterhof {
 			{
 				if(ReiterListe.get(i).getKoennen() < PferdeListe.get(j).getKoennen())
 				{
-					System.out.println("Yeah");
 					ReiterListe.get(i).getWuensche().gewuenscht[j] = false;
 				}
 			}
@@ -41,21 +40,40 @@ public class Reiterhof {
 			{
 				Reiter aktuellerReiter = ReiterListe.get(i);
 				System.out.println(ReiterListe.get(i).getName());
+				System.out.println(i);
 				
 				for(int j = 0; j < PferdeListe.size(); j++)
 				{
+					
+					
+					System.out.println(aktuellerReiter.getName());
+					for(int l = 0; l < PferdeListe.size(); l++)
+					{
+						System.out.println(verfuegbar[l] + " " + aktuellerReiter.getWuensche().gewuenscht[l] );
+					}
+					System.out.println();
 					if( verfuegbar[j] == true && aktuellerReiter.getWuensche().gewuenscht[j] == true )
 					{
 						Paar paar = new Paar(aktuellerReiter,PferdeListe.get(j));
 						Paare.add(paar);
+						System.out.println(i);
 						verfuegbar[j] = false;
-						ReiterListe.remove(i);
-						System.out.println("yeah");
+						ReiterListe.remove(aktuellerReiter);
+						for(int k = 0; k < ReiterListe.size(); k++)
+						{
+							System.out.println(ReiterListe.get(k).getName());
+						}
+						System.out.println();
+						
+						Dialog dialog = new Dialog();
+						dialog.toString(Paare);
+						System.out.println("\n\n\n");
 						zuordnen(ReiterListe);
 					}
-					else 
+					else
 					{
-						
+						ReiterListe.add(ReiterListe.size(), Paare.get(0).getReiter());
+						zuordnen(ReiterListe);
 					}
 				}
 			}
