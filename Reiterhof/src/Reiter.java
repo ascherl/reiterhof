@@ -1,15 +1,12 @@
-import java.util.ArrayList;
-
-
 public class Reiter {
 	
 	private String name;
-	private ArrayList<Pferd> wuensche;
+	private Wuensche wuensche;
 	private int koennen;
 	
-	Reiter(String name, ArrayList<Pferd> Wuensche, int koennen) {
+	Reiter(String name, Wuensche wuensche, int koennen) {
 		this.name = name;
-		this.wuensche = Wuensche;
+		this.wuensche = wuensche;
 		this.koennen = koennen;
 	}
 
@@ -21,7 +18,7 @@ public class Reiter {
 		return koennen;
 	}
 	
-	public ArrayList<Pferd> getWuensche() {
+	public Wuensche getWuensche() {
 		return this.wuensche;
 	}
 	

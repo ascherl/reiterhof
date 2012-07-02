@@ -31,40 +31,34 @@ public class ReiterhofMain {
 		
 		ArrayList<Reiter> ReiterListe = new ArrayList<Reiter>();
 		
-		ArrayList<Pferd> wuensche_anja = new ArrayList<Pferd>();
-			wuensche_anja.add(nicki);
-			wuensche_anja.add(pucki);
-			wuensche_anja.add(anex);
-			wuensche_anja.add(wittchen);
-		ReiterListe.add(new Reiter("Anja",wuensche_anja,0));
+		int[] gewuenscht_anja = {0,1,3,5,};
+		Wuensche wuensche_anja = new Wuensche(gewuenscht_anja,PferdeListe.size());
+		ReiterListe.add(new Reiter("Anja", wuensche_anja ,0));
 		
-		ArrayList<Pferd> wuensche_bertram = new ArrayList<Pferd>();
+		int[] gewuenscht_bertram = {0,1,2,3,4,5,6,7,8,};
+		Wuensche wuensche_bertram = new Wuensche(gewuenscht_bertram,PferdeListe.size());
 		ReiterListe.add(new Reiter("Bertram",wuensche_bertram,1));
 		
-		ArrayList<Pferd> wuensche_christa = new ArrayList<Pferd>();
-			wuensche_christa.add(hurrikan);
+		int[] gewuenscht_christa = {2,};
+		Wuensche wuensche_christa = new Wuensche(gewuenscht_christa,PferdeListe.size());
 		ReiterListe.add(new Reiter("Christa",wuensche_christa,2));
 		
-		ArrayList<Pferd> wuensche_doris = new ArrayList<Pferd>();
-			wuensche_doris.add(anex);
-			wuensche_doris.add(wittchen);
-			wuensche_doris.add(pucki);
+		int[] gewuenscht_doris = {0,3,6,};
+		Wuensche wuensche_doris = new Wuensche(gewuenscht_doris,PferdeListe.size());
 		ReiterListe.add(new Reiter("Doris",wuensche_doris,0));
-		
-		ArrayList<Pferd> wuensche_emil = PferdeListe;
+	
+		int[] gewuenscht_emil = {0,1,2,3,4,5,6,7,8,};
+		Wuensche wuensche_emil = new Wuensche(gewuenscht_emil,PferdeListe.size());
 		ReiterListe.add(new Reiter("Emil",wuensche_emil,0));
 		
-		ArrayList<Pferd> wuensche_fritz = new ArrayList<Pferd>();
-			wuensche_fritz.add(sturmwind);
-			wuensche_fritz.add(hurrikan);
+		int[] gewuenscht_fritz = {2,6,};
+		Wuensche wuensche_fritz = new Wuensche(gewuenscht_fritz,PferdeListe.size());
 		ReiterListe.add(new Reiter("Fritz",wuensche_fritz,2));
 		
-		ArrayList<Pferd> wuensche_gabi = new ArrayList<Pferd>();
-			wuensche_gabi.add(hurrikan);
-			wuensche_gabi.add(anex);
-			wuensche_gabi.add(tornado);
-			wuensche_gabi.add(sturmwind);
+		int[] gewuenscht_gabi = {0,2,4,6,};
+		Wuensche wuensche_gabi = new Wuensche(gewuenscht_gabi,PferdeListe.size());
 		ReiterListe.add(new Reiter("Gabi",wuensche_gabi,1));
+		
 		
 		Reiterhof Reiterhof = new Reiterhof(ReiterListe, PferdeListe);
 		
