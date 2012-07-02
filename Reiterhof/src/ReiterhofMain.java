@@ -7,6 +7,7 @@ public class ReiterhofMain {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		ArrayList<Pferd> PferdeListe = new ArrayList<Pferd>();
 			
 		Pferd anex = new Pferd("Anex",0);
@@ -61,7 +62,7 @@ public class ReiterhofMain {
 		
 		
 		Reiterhof Reiterhof = new Reiterhof(ReiterListe, PferdeListe);
-		
+
 		Reiterhof.zuordnen();
 		
 	}

@@ -22,6 +22,7 @@ public class Reiterhof {
 			{
 				if(ReiterListe.get(i).getKoennen() < PferdeListe.get(j).getKoennen())
 				{
+					System.out.println("Yeah");
 					ReiterListe.get(i).getWuensche().gewuenscht[j] = false;
 				}
 			}
@@ -39,6 +40,7 @@ public class Reiterhof {
 			for(int i = 0; i < ReiterListe.size(); i++)
 			{
 				Reiter aktuellerReiter = ReiterListe.get(i);
+				System.out.println(ReiterListe.get(i).getName());
 				
 				for(int j = 0; j < PferdeListe.size(); j++)
 				{
@@ -48,11 +50,12 @@ public class Reiterhof {
 						Paare.add(paar);
 						verfuegbar[j] = false;
 						ReiterListe.remove(i);
+						System.out.println("yeah");
 						zuordnen(ReiterListe);
 					}
 					else 
 					{
-						//TODO Bessere ELSE-Bedingung?! 
+						
 					}
 				}
 			}
