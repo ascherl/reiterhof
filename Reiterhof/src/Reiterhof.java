@@ -30,7 +30,45 @@ public class Reiterhof {
 	}
 	
 	public void zuordnen(ArrayList<Reiter> ReiterListe) {
-		if(ReiterListe.size() == 0){
+		boolean funktioniert = false;
+		for(int j = 0; j < PferdeListe.size(); j++)
+		{
+			if(verfuegbar[j] == true && ReiterListe.get(0).getWuensche().gewuenscht[j] == true)
+			{
+				System.out.println("yeah");
+				Paar paar = new Paar(ReiterListe.get(0),PferdeListe.get(j));
+				Paare.add(paar);
+				verfuegbar[j] = false;
+				funktioniert = true;
+				ReiterListe.remove(ReiterListe.get(0));
+			}
+					
+			for(int k = 0; k < ReiterListe.size(); k++)
+			{
+				System.out.println(ReiterListe.get(k).getName());
+				System.out.println(funktioniert);
+			}
+			if(funktioniert==false)
+			{
+				System.out.println("YEZZ!");
+				ReiterListe.add(ReiterListe.size(), Paare.get(0).getReiter());
+				verfuegbar[PferdeListe.indexOf(Paare.get(0).getPferd())] = true;
+				for(int y = 0; y < verfuegbar.length; y++)
+				{
+					System.out.println(verfuegbar[y]);
+				}
+				zuordnen(ReiterListe);
+			}
+			System.out.println();
+			Dialog dialog = new Dialog();
+			dialog.toString(Paare);
+			System.out.println("\n\n\n");
+		}
+	}
+}
+
+
+	/*		if(ReiterListe.size() == 0){
 			Dialog dialog = new Dialog();
 			dialog.toString(Paare);
 		}
@@ -79,9 +117,7 @@ public class Reiterhof {
 			}
 		}
 	}
-}
-
-
+	 */
 	/**	for(int i = 0; i < ReiterListe.size(); i++)
 		{
 			if(ReiterListe.get(i).getWuensche().size() == k) 
