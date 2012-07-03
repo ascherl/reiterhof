@@ -3,15 +3,14 @@ import java.util.ArrayList;
 public class Reiterhof {
 	private ArrayList<Reiter> ReiterListe;
 	private ArrayList<Pferd> PferdeListe;
-	private ArrayList<Paar> Paare;
 
 	Reiterhof(ArrayList<Reiter> ReiterListe, ArrayList<Pferd> Pferde) {
 		this.ReiterListe = ReiterListe;
 		this.PferdeListe = Pferde;
-		this.Paare = new ArrayList<Paar>();
 	}
 	
 	public void zuordnen() {
+		ArrayList<Paar> Paare = new ArrayList<Paar>();
 		zuordnen(ReiterListe, PferdeListe, Paare, true);
 		Dialog dialog = new Dialog();
 		dialog.toString(Paare);
@@ -59,7 +58,6 @@ public class Reiterhof {
 				}
 			}
 		}
-		
 		return false;
 	}
 	
