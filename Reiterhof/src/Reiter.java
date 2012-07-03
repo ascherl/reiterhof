@@ -1,10 +1,10 @@
 public class Reiter {
 	
 	private String name;
-	private Wuensche wuensche;
+	private String[] wuensche;
 	private int koennen;
 	
-	Reiter(String name, Wuensche wuensche, int koennen) {
+	Reiter(String name, String[] wuensche, int koennen) {
 		this.name = name;
 		this.wuensche = wuensche;
 		this.koennen = koennen;
@@ -18,7 +18,7 @@ public class Reiter {
 		return koennen;
 	}
 	
-	public Wuensche getWuensche() {
+	public String[] getWuensche() {
 		return this.wuensche;
 	}
 	
