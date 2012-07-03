@@ -32,33 +32,26 @@ public class ReiterhofMain {
 		
 		ArrayList<Reiter> ReiterListe = new ArrayList<Reiter>();
 		
-		int[] gewuenscht_anja = {0,1,3,5,};
-		Wuensche wuensche_anja = new Wuensche(gewuenscht_anja,PferdeListe.size());
-		ReiterListe.add(new Reiter("Anja", wuensche_anja ,0));
+		String[] gewuenscht_anja = {"Nicki", "Pucki", "Wittchen", "Anex"};
+		ReiterListe.add(new Reiter("Anja", gewuenscht_anja, 0));
 		
-		int[] gewuenscht_bertram = {0,1,2,3,4,5,6,7,8,};
-		Wuensche wuensche_bertram = new Wuensche(gewuenscht_bertram,PferdeListe.size());
-		ReiterListe.add(new Reiter("Bertram",wuensche_bertram,1));
+		String[] gewuenscht_bertram = {"Anex", "Nicki", "Hurrikan", "Pucki", "Tornado", "Wittchen", "Sturmwind", "Zausel", "Zickzack"};
+		ReiterListe.add(new Reiter("Bertram", gewuenscht_bertram, 1));
 		
-		int[] gewuenscht_christa = {2,};
-		Wuensche wuensche_christa = new Wuensche(gewuenscht_christa,PferdeListe.size());
-		ReiterListe.add(new Reiter("Christa",wuensche_christa,2));
+		String[] gewuenscht_christa = {"Hurrikan"};
+		ReiterListe.add(new Reiter("Christa", gewuenscht_christa, 2));
 		
-		int[] gewuenscht_doris = {0,3,6,};
-		Wuensche wuensche_doris = new Wuensche(gewuenscht_doris,PferdeListe.size());
-		ReiterListe.add(new Reiter("Doris",wuensche_doris,0));
+		String[] gewuenscht_doris = {"Anex", "Pucki", "Wittchen"};
+		ReiterListe.add(new Reiter("Doris", gewuenscht_doris, 0));
 	
-		int[] gewuenscht_emil = {0,1,2,3,4,5,6,7,8,};
-		Wuensche wuensche_emil = new Wuensche(gewuenscht_emil,PferdeListe.size());
-		ReiterListe.add(new Reiter("Emil",wuensche_emil,0));
+		String[] gewuenscht_emil = {"Anex", "Nicki", "Hurrikan", "Pucki", "Tornado", "Wittchen", "Sturmwind", "Zausel", "Zickzack"};
+		ReiterListe.add(new Reiter("Emil", gewuenscht_emil, 0));
 		
-		int[] gewuenscht_fritz = {2,6,};
-		Wuensche wuensche_fritz = new Wuensche(gewuenscht_fritz,PferdeListe.size());
-		ReiterListe.add(new Reiter("Fritz",wuensche_fritz,2));
+		String[] gewuenscht_fritz = {"Hurrikan", "Sturmwind"};
+		ReiterListe.add(new Reiter("Fritz", gewuenscht_fritz, 2));
 		
-		int[] gewuenscht_gabi = {0,2,4,6,};
-		Wuensche wuensche_gabi = new Wuensche(gewuenscht_gabi,PferdeListe.size());
-		ReiterListe.add(new Reiter("Gabi",wuensche_gabi,1));
+		String[] gewuenscht_gabi = {"Anex", "Hurrikan", "Tornado", "Sturmwind", "Zausel"};
+		ReiterListe.add(new Reiter("Gabi", gewuenscht_gabi, 1));
 		
 		
 		Reiterhof Reiterhof = new Reiterhof(ReiterListe, PferdeListe);
