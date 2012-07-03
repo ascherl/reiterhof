@@ -10,6 +10,7 @@ public class ReiterhofMain {
 		
 		ArrayList<Pferd> PferdeListe = new ArrayList<Pferd>();
 			
+		
 		Pferd anex = new Pferd("Anex",0);
 			PferdeListe.add(anex);
 		Pferd nicki = new Pferd("Nicki",1);
@@ -29,8 +30,8 @@ public class ReiterhofMain {
 		Pferd zickkack = new Pferd("Zickzack",2);
 			PferdeListe.add(zickkack);
 		
-		
 		ArrayList<Reiter> ReiterListe = new ArrayList<Reiter>();
+		
 		
 		String[] gewuenscht_anja = {"Nicki", "Pucki", "Wittchen", "Anex"};
 		ReiterListe.add(new Reiter("Anja", gewuenscht_anja, 0));
@@ -50,7 +51,7 @@ public class ReiterhofMain {
 		String[] gewuenscht_fritz = {"Hurrikan", "Sturmwind"};
 		ReiterListe.add(new Reiter("Fritz", gewuenscht_fritz, 2));
 		
-		String[] gewuenscht_gabi = {"Anex", "Hurrikan", "Tornado", "Sturmwind", "Zausel"};
+		String[] gewuenscht_gabi = {"Anex", "Hurrikan", "Tornado", "Sturmwind"};
 		ReiterListe.add(new Reiter("Gabi", gewuenscht_gabi, 1));
 		
 		
